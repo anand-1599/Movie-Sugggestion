@@ -106,13 +106,13 @@ function App() {
     }, []);
 
     const fetchMovies = async () => {
-        const response = await axios.get('http://localhost:5000/movies');
+        const response = await axios.get('https://movie-sugggestion.onrender.com/movies');
         setMovies(response.data);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:5000/add-movie', form);
+        await axios.post('https://movie-sugggestion.onrender.com/add-movie', form);
         setForm({ name: '', imdbLink: '', youtubeLink: '', cast: '', summary: '' });
         fetchMovies();
     };
@@ -120,7 +120,7 @@ function App() {
     const handleVote = async (id, vote) => {
         const sessionVotes = JSON.parse(sessionStorage.getItem('votes')) || {};
         if (!sessionVotes[id]) {
-            await axios.post(`http://localhost:5000/vote/${id}`, { vote });
+            await axios.post(`https://movie-sugggestion.onrender.com/vote/${id}`, { vote });
             sessionVotes[id] = vote;
             sessionStorage.setItem('votes', JSON.stringify(sessionVotes));
             fetchMovies();
