@@ -13,6 +13,10 @@ input, textarea, button {
   border: none;
 }
 
+h2{
+  font-weight: bold;
+}
+
 button {
   background-color: #ff4757;
   color: white;
@@ -21,4 +25,15 @@ button {
 
 button:hover {
   background-color: #ff6b81;
+}
+
+.custom-link {
+  color: white; /* Set the font color to white */
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: green; /* Set the underline color to green */
+  font-weight: bold;
+}
+
+.custom-link:hover {
+  text-decoration-color: lightgreen; /* Optionally change underline color on hover */
 }

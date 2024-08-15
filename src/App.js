@@ -130,21 +130,23 @@ function App() {
     return (
         <Container>
             <ParticlesBackground />
+            <div style = {{overflowY : 'auto'}}>
+                <h2 style = {{textAlign: 'center'}}>Dorm Films</h2>
             <Gallery>
                 {movies.map((movie) => (
                     <MovieItem key={movie._id}>
-                        <h2>{movie.name}</h2>
+                        <h2 style = {{ fontSize:'1.5rem', marginBottom: '10px'}}>{movie.name}</h2>
                         {movie.poster && <img src={movie.poster} alt={`${movie.name} Poster`} />}
                         <p>{movie.summary}</p>
                         <p>
                             <b>Cast:</b> {movie.cast}
                         </p>
                         <p>
-                            <a href={movie.imdbLink} target="_blank" rel="noopener noreferrer">
+                            <a href={movie.imdbLink} target="_blank" rel="noopener noreferrer" className="custom-link">
                                 IMDb
                             </a>{' '}
                             |{' '}
-                            <a href={movie.youtubeLink} target="_blank" rel="noopener noreferrer">
+                            <a href={movie.youtubeLink} target="_blank" rel="noopener noreferrer" className="custom-link">
                                 YouTube Trailer
                             </a>
                         </p>
@@ -179,8 +181,9 @@ function App() {
                     </MovieItem>
                 ))}
             </Gallery>
+            </div>
             <FormContainer>
-                <h1>Movie Voting App</h1>
+                <h1 style = {{textAlign: 'center'}}>Movie Voting App</h1>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
