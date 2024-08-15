@@ -136,8 +136,8 @@ function App() {
                 {movies.map((movie) => (
                     <MovieItem key={movie._id}>
                         <h2 style = {{ fontSize:'1.5rem', marginBottom: '10px'}}>{movie.name}</h2>
-                        {movie.poster && <img src={movie.poster} alt={`${movie.name} Poster`} />}
-                        <p>{movie.summary}</p>
+                        {movie.poster && <img style = {{height: '300px',objectFit: 'cover',borderRadius: '10px',marginBottom: '10px'}}src={movie.poster} alt={`${movie.name} Poster`} />}
+                        <p style = {{fontSize: '1rem',marginBottom: '5px', textAlign: 'justify',height: '130px', overflowY: 'auto' }}>{movie.summary}</p>
                         <p>
                             <b>Cast:</b> {movie.cast}
                         </p>
