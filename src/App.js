@@ -183,7 +183,7 @@ function App() {
             </Gallery>
             </div>
             <FormContainer>
-                <h1 style = {{textAlign: 'center'}}>Movie Voting App</h1>
+                <h1 style = {{textAlign: 'center'}}>Suggest a Movie</h1>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
