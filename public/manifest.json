@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Movie Suggestion App",
+  "name": "Dorm Movie Nights",
   "icons": [
     {
       "src": "favicon.ico",
