@@ -135,7 +135,7 @@ function App() {
             <Gallery>
                 {movies.map((movie) => (
                     <MovieItem key={movie._id}>
-                        <h2 style = {{ fontSize:'1.4rem', marginBottom: '10px', textAlign: 'center',height: 'auto', overflowY: 'auto'}}>{movie.name}</h2>
+                        <h2 style = {{ fontSize:'1.4rem', marginBottom: '10px', textAlign: 'center',height: '55px', overflowY: 'auto'}}>{movie.name}</h2>
                         {movie.poster && <img style = {{height: '300px',objectFit: 'cover',borderRadius: '10px',marginBottom: '10px'}}src={movie.poster} alt={`${movie.name} Poster`} />}
                         <p style = {{fontSize: '1rem',marginBottom: '5px', textAlign: 'justify',height: '130px', overflowY: 'auto' }}>{movie.summary}</p>
                         <p style = {{textAlign: 'center', height: '50px', overflowY: 'auto'}}>
