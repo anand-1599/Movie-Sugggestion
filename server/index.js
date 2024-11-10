@@ -13,7 +13,7 @@ const OMDB_API_KEY = process.env.OMDB_API_KEY || 'b8cc6273'; // Replace with you
 app.use(cors());
 app.use(bodyParser.json());
 
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://gptmspe:mspegpt-2023@movie.6kpjvlg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://gptmspe:mspegpt-2023@movie.6kpjvlg.mongodb.net/?retryWrites=true&w=majority&appName=Movie';
 
 mongoose.connect(mongoURI/*'mongodb://localhost:27017/movieDB'*/, { useNewUrlParser: true, useUnifiedTopology: true });
     //.then(() => console.log('MongoDB connected'))
